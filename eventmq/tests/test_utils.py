@@ -247,7 +247,7 @@ class EMQPServiceTestCase(unittest.TestCase):
 
         obj.send_inform(queues=([10, 'push'], [7, 'email'],
                                 [3, 'default']))
-        sendmsg_mock.asert_called_with(
+        sendmsg_mock.assert_called_with(
             'some-outgoing-socket', 'INFORM',
             ['[10, "push"],[7, "email"],[3, "default"]',
              constants.CLIENT_TYPE.worker]
